@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tailor Citra Busana</title> 
+    <link rel="icon" href="image/logo.png"> 
+    <style>
+         body {
+            font-family:'Times New Roman', serif; 
+            margin: 0; 
+            padding: 0; 
+        }
+        header {
+            background: #D8D2C2; 
+            color: #000000; 
+            padding: 5px 0; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: right; 
+            align-items: center;
+        }
+
+        .logo img {
+            height: 100px; 
+            margin-right: 20px
+        }
+        header h1 {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        margin: 0; 
+        flex-grow: 1; 
+        text-align: left; 
+    }
+    header nav ul {
+        list-style: none; /* Menghilangkan bullet pada list */
+        padding: 0; /* Menghilangkan padding default */
+        margin: 0; /* Menghilangkan margin default */
+        display: flex; /* Menggunakan flexbox untuk menata item secara horizontal */
+        justify-content: center; /* Mengatur item agar berada di tengah */
+    }
+
+    header nav ul li {
+        margin: 0 15px; /* Memberikan jarak antar item list */
+    }
+
+    header nav ul li a {
+        color: #000000; /* Warna teks link */
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
+        text-transform: capitalize; /* Mengubah semua huruf menjadi kapital */
+        font-size: 20px; /* Mengatur ukuran font link */
+        padding: 5px 7px; /* Memberikan padding pada link untuk area klik yang lebih besar */
+        transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+        border-radius: 10px; 
+    }
+
+    header nav ul li a:hover {
+        background-color: #555; /* Mengubah latar belakang saat hover */
+        color: #fff; /* Mengubah warna teks saat hover */
+    }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 1200px; 
+            margin: 3rem auto; 
+            padding: 0 20px; 
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            background-color: #fff; 
+            padding: 2rem; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 4rem; 
+        }
+
+        .contact-form h2 {
+            color: #4B0082; /* Mengatur warna teks untuk judul formulir kontak */
+            margin-bottom: 1.5rem; /* Jarak bawah untuk judul formulir kontak */
+            text-align: center; /* Mengatur teks judul agar berada di tengah */
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%; /* Mengatur lebar input dan textarea agar memenuhi kontainer */
+            padding: 1rem; /* Padding untuk input dan textarea */
+            margin-bottom: 1rem; /* Jarak bawah untuk input dan textarea */
+            border: 1px solid #ddd; /* Border untuk input dan textarea */
+            border-radius: 5px; /* Mengatur sudut membulat untuk input dan textarea */
+            font-size: 1rem; /* Ukuran font untuk input dan textarea */
+        }
+
+        .contact-form button {
+            background-color: #4B0082; /* Warna latar belakang untuk tombol kirim */
+            color: white; /* Warna teks untuk tombol kirim */
+            padding: 1rem; /* Padding untuk tombol kirim */
+            border: none; /* Menghilangkan border pada tombol */
+            border-radius: 5px; /* Mengatur sudut membulat untuk tombol */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+            font-size: 1rem; /* Ukuran font untuk tombol kirim */
+            transition: background-color 0.3s; /* Menambahkan efek transisi saat hover */
+        }
+
+        .contact-form button:hover {
+            background-color: #FFE4B5; /* Mengubah warna latar belakang tombol saat hover */
+        }
+
+        /* Testimonial Styles */
+        .testimonials {
+            margin-top:  4rem; /* Jarak atas untuk bagian testimoni */
+        }
+
+        .testimonial {
+            background-color: #FFE4B5; /* Warna latar belakang untuk setiap testimoni */
+            padding: 1.5rem; /* Padding untuk testimoni */
+            border-radius: 10px; /* Mengatur sudut membulat untuk testimoni */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada testimoni */
+            margin-bottom: 1.5rem; /* Jarak bawah untuk setiap testimoni */
+        }
+
+        .testimonial h3 {
+            color: #000000; /* Mengatur warna teks untuk nama pelanggan */
+            margin-bottom: 0.5rem; /* Jarak bawah untuk nama pelanggan */
+        }
+
+        .testimonial p {
+            color: #666; /* Mengatur warna teks untuk isi testimoni */
+            line-height: 1.5; /* Mengatur jarak antar baris untuk keterbacaan yang lebih baik */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-form h2 {
+                font-size: 1.8rem; /* Mengatur ukuran font untuk judul formulir kontak pada layar kecil */
+            }
+        }
+
+        .back-button {
+            position: absolute; /* Mengatur posisi tombol kembali */
+            top: 10px; /* Jarak dari atas */
+            background-color: #ad09c2; /* Warna latar belakang untuk tombol kembali */
+            color: #FFF; /* Warna teks untuk tombol kembali */
+            border: none; /* Menghilangkan border pada tombol */
+            padding: 10px 15px; /* Padding untuk tombol kembali */
+            font-size: 16px; /* Ukuran font untuk tombol kembali */
+            cursor: pointer; /* Menunjukkan bahwa ini adalah tombol */
+            border-radius: 5px; /* Mengatur sudut membulat untuk tombol */
+            display: inline-flex; /* Untuk menampilkan ikon dan teks secara sejajar */
+            align-items: center; /* Menyelaraskan item di tengah */
+        }
+
+        .back-button.left {
+            left: 10px; /* Jarak dari kiri untuk tombol kiri */
+        }
+
+        .back-button.right {
+            right: 10px; /* Jarak dari kanan untuk tombol kanan */
+        }
+
+        .back-button:hover {
+            background-color: #ffbc49; /* Warna saat hover pada tombol kembali */
+        }
+
+        .back-button i {
+            margin-right: 5px; /* Jarak antara ikon dan teks pada tombol kembali */
+        }
+        footer {
+    background-image: url('image/mesin1.jpeg'); /* Ganti dengan path gambar kamu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(15, 0, 0);
+    padding: 40px 20px;
+    font-family: 'Times New Roman', sans-serif;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: rgba(189, 167, 116, 0.85); /* Semi-transparan untuk kontras teks */
+    padding: 30px;
+    border-radius: 10px;
+  }
+
+  .footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    gap: 5px;
+  }
+
+  .footer-links ul li a {
+    color: rgb(13, 13, 13);
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="image/logo.png" alt="Logo Tailor Citra Busana"></a>
+        </div>
+        <h1>Tailor Citra Busana</h1> <!-- Judul utama website -->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profil.html">Profil</a></li> <!-- Link ke bagian Tentang Kami -->
+                <li><a href="produk.html">Produk</a></li> <!-- Link ke bagian Layanan -->
+                <li><a href="layanan booking.html">Layanan booking</a></li> <!-- Link ke bagian Kontak -->
+                <li><a href="ulasan.html">Ulasan</a></li>
+                <li><a href="pengembang.html">Pengembang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>Hubungi Kami</h2> <!-- Judul untuk formulir kontak -->
+            <form action="your-form-handler.php" method="POST"> <!-- Ganti dengan URL pengolah formulir Anda -->
+                <input type="text" name="name" placeholder="Nama Anda" required> <!-- Input untuk nama -->
+                <input type="email" name="email" placeholder="Email Anda" required> <!-- Input untuk email -->
+                <textarea name="message" rows="5" placeholder="Pesan Anda" required></textarea> <!-- Textarea untuk pesan -->
+                <button type="submit">Kirim Pesan</button> <!-- Tombol untuk mengirim pesan -->
+            </form>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>Testimoni Pelanggan</h2> <!-- Judul untuk bagian testimoni -->
+            <div class="testimonial"> <!-- Testimoni pertama -->
+                <h3>Ani S.</h3> <!-- Nama pelanggan -->
+                <p>"Saya sangat puas dengan hasil jahitan dari Tailor Citra Busana. Kualitasnya luar biasa dan pelayanan sangat ramah!"</p> <!-- Isi testimoni -->
+            </div>
+            <div class="testimonial"> <!-- Testimoni kedua -->
+                <h3>Budi T.</h3> <!-- Nama pelanggan -->
+                <p>"Jas yang saya pesan sangat pas dan sesuai dengan keinginan saya. Terima kasih Tailor Citra Busana!"</p> <!-- Isi testimoni -->
+            </div>
+            <div class="testimonial"> <!-- Testimoni ketiga -->
+                <h3>Rina M.</h3> <!-- Nama pelanggan -->
+                <p>"Pelayanan yang cepat dan hasil jahitan yang memuaskan. Saya pasti akan kembali lagi!"</p> <!-- Isi testimoni -->
+            </div>
+        </section>
+    </main>
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Melayani :</h2>
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Jahit Seragam</a></li>
+            <li><a href="#">Jahit Gamis</a></li>
+            <li><a href="#">Jahit Baju Koko</a></li>
+            <li><a href="#">Jahit Rok</a></li>
+            <li><a href="#">Jahit Kebaya</a></li>
+            <li><a href="#">Chobani® Mexico</a></li>
+          </ul>
+        </div>
+        <div class="social-icons">
+          <a href="https://web.whatsapp.com/"><img src="image/wa (3).png" alt="whatsapp"></a>
+          <a href="#"><img src="image/gmail.png" alt="email"></a>
+          <a href="#"><img src="image/loc.png" alt="alamat"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html> 
